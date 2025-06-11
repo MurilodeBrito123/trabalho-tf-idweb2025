@@ -1,0 +1,15 @@
+
+.trilho{
+    width: 100px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50px;
+    position: relative;
+}
+.altura{
+    height: 400px;
+    padding-bottom: 100px;
+}
+.centralizacao{
+    text-align: center; 
+}
