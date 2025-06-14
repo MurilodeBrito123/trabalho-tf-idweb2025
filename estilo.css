@@ -8,7 +8,7 @@
 }
 .altura{
     height: 400px;
-    padding-bottom: 100px;
+    padding-bottom: 100px !important;
 }
 .centralizacao{
     text-align: center; 
