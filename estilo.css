@@ -13,3 +13,23 @@
 .centralizacao{
     text-align: center; 
 }
+.textocentral{
+    text-align: center;
+}
+.popup{
+    padding: 10px;
+    border: 0.5px solid gray;
+    text-align: justify;
+}
+#navbartexto{
+    text-align: end;
+}
+#imagens{
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 5px #999;
+    transition: .5s;
+}
+#imagens:hover{
+    transform: scale(1.1);
+}
