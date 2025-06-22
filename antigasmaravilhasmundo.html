@@ -9,16 +9,61 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <title>As 7 maravilahs do ANTIGO mundo</title>
 </head>
+<style>
+    .quadro {
+        cursor: pointer;
+        padding: 10px;
+        background-color: goldenrod;
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+    #lustre {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .imga {
+        cursor: pointer;
+        position: relative;
+        box-shadow: 0px 0px 5px white;
+        transition: transform .5s ease;
+
+    }
+
+    .imga:hover {
+        transform: scale(1.1);
+    }
+
+    .j {
+        text-align: justify;
+    }
+
+    #banco {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+</style>
 
 <body data-bs-theme="dark">
     <!--Navbar-->
-    <nav class="navbar navbar-expand-sm container-fluid border-bottom" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-sm container-fluid border-bottom">
         <div class="container-fluid">
             <div class="navbar-brand">
                 <img src="imagens/History.png" alt="" width="60px" height="40px">
             </div>
-            </a> <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-                aria-controls="offcanvas" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+            </a> <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
                 <div class="offcanvas-header">
@@ -27,13 +72,11 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="../maravilhasdomunto.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Maravilhas antigas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="maravilhasdomunto.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="antigasmaravilhasmundo.html">Maravilhas
+                                antigas</a></li>
                         <li class="nav-item"><a class="nav-link" href="Novasmaravilhasmundo.html">Maravilhas Novas</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Viagens</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Colaboradores</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Empresa auxiliar</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" aria-label="Cart"> <svg class="bi" width="24"
                                     height="24" aria-hidden="true">
                                     <use xlink:href="#cart"></use>
@@ -45,81 +88,490 @@
     </nav>
 
     <!--Começo do conteúdo-->
-    <div class="container-md">
-        <h2 class="container-md d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom"
-            style="text-align: center;"><img src="imagem logo maravilha antiga.png" alt="" height="50px" width="50px"
-                style="padding-right: 10px;">As 7 maravilhas do antigo mundo</h2>
-        <p class="popup"><strong>Atenção!</strong> essa página é apenas focada para as informações sobre as 7 antigas
-            maravilhas do mundo</p>
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">Grande pirâmide de Gizé. <span
-                        class="text-body-secondary">Platô de Gizé, próximo ao Cairo, Egito. </span></h2>
-                <p class="lead" class="textocentral">Foi construída por volta de 2560 a.C. como tumba para o faraó
-                    Quéops. Originalmente
-                    atingia 147 m de altura, hoje tem cerca de 139 m. Única maravilha antiga que permanece intacta.
-                    Contém câmaras internas, incluindo a "câmara do rei",
-                    e estruturas ocultas foram descobertas recentemente.</p>
-            </div>
-            <div class="col-md-5"> <img src="imagens/images (2).jpg" alt="" height="500px" width="500px"> </div>
+    <img class="img" src="Imagens das antigas/184136.png" alt="" id="lustre" input class="form-check-input"
+        type="checkbox" role="switch" id="switchCheckChecked" checked="" onclick="myFunction()"
+        style="cursor: pointer;">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+            <h1 class="display-5"><strong>As maravilhas do antigo mundo</strong></h1>
+            <p class="lead">Sintam-se a vontade para a observar a galeria e entender seu contexto histórico e artes</p>
         </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1">Jardins suspensos da Babiônia <span
-                        class="text-body-secondary">Babil, sul do atual Iraque (próximo a Hillah), embora sua existência
-                        seja incerta</span></h2>
-                <p class="lead" class="textocentral">Supostamente construídos entre 600–580 a.C. por Nabucodonosor II,
-                    para sua esposa Amytis
-                    da Média. Eram terraços com irrigação sofisticada (talvez com parafuso de Arquimedes). Não há
-                    evidências arqueológicas diretas em Babil; alguns acreditam que a versão real seria em Nínive.</p>
-            </div>
-            <div class="col-md-5 order-md-1"> <img src="imagens/jardimcapasda.jpg" alt="" height="350px" width="500px">
-            </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">Templo de Ártemis em Éfeso <span
-                        class="text-body-secondary">Perto da moderna Selçuk, região de Éfeso, Turquia. . </span></h2>
-                <p class="lead">Foi construída por volta de 2560 a.C. como tumba para o faraó Quéops. Originalmente
-                    atingia 147 m de altura, hoje tem cerca de 139 m. Única maravilha antiga que permanece intacta.
-                    Contém câmaras internas, incluindo a "câmara do rei",
-                    e estruturas ocultas foram descobertas recentemente.</p>
-            </div>
-            <div class="col-md-5"> <img src="imagens/Miniaturk_009.jpg" alt="" height="400px" width="500px"> </div>
-        </div>
-    </div>
-    <!--Footer-->
-    <div class="container-flud">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-body-secondary">© 2025 History entretainment, Inc</p> <img
-                src="imagens/History.png" height="200px" width="230px">
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-                <li class="nav-item">
-                    <div class="btn-group dropup">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Tema
-                        </button>
-                        <ul class="dropdown-menu">
-                            <div class="trilho" style="display: flex;align-items: center; flex-direction: column;">
-                                <!--Trocar cor do site-->
-                                <input style="height: 100px; width: 100px;" class="from-check-input p-2" type="checkbox"
-                                    role="switch" id="flexSwhitchCheckCheack" checked onclick="myFunction()" />
-                            </div>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </footer>
-    </div>
+        <div class="bg-body shadow-sm mx-auto"
+            style="padding: 10px; width: 80%; height: fluid; border-radius: 21px 21px 0 0;">
 
+            <!--aqui ficarão as imagens-->
+
+            <div class="row" style="margin-bottom: 50px;">
+                <!--Colosso de Rodes-->
+                <div class="col-md-4">
+                    <div style="padding-bottom: 70px;">
+                        <img class="quadro imga" src="Imagens das antigas/images (6).jpeg" class=" img-fluid"
+                            width="500px" height="500px" data-bs-toggle="modal" data-bs-target="#Rodesmodal" alt="">
+                    </div>
+                    <!--Jardins suspensos da Babilônia-->
+                    <img class="quadro imga" src="Imagens das antigas/jardimcapasda.jpg" class=" img-fluid"
+                        width="500px" height="500px" data-bs-toggle="modal" data-bs-target="#muralhamodal" alt="">
+                </div>
+                <!--Estátua de Zeus-->
+                <div class="col-md-4 offset-md-3" style="padding-top: 10px;"><img class="quadro imga"
+                        src="Imagens das antigas/E9kWyogWYAE-vLu.jpg" class=" img-fluid" width="500px" height="500px"
+                        data-bs-toggle="modal" data-bs-target="#Zeusmodal" alt=""></div>
+            </div>
+            <div class="row">
+                <!--Farol-->
+                <div class="col-md-3 offset-md-3"><img class="quadro imga" src="Imagens das antigas/PHAROS2006_crop.jpg"
+                        class=" img-fluid" width="500px" height="500px" data-bs-toggle="modal"
+                        data-bs-target="#Farolmodal" alt=""></div>
+                <!--Mausoléu de Halicarnasso-->
+                <div class="col-md-3 offset-md-3"><img class="quadro imga" src="Imagens das antigas/mausoleu.jpeg"
+                        class=" img-fluid" width="500px" height="500px" data-bs-toggle="modal"
+                        data-bs-target="#mausoleumodal" alt=""></div>
+            </div>
+            <div class="row">
+
+                <!--Templo de Ártemis em Éfeso, -->
+
+                <div class="col-md-6 offset-md-3" style="padding-top: 20px;">
+                    <img class="quadro imga" src="Imagens das antigas/Miniaturk_009.jpg" class=" img-fluid"
+                        width="500px" height="500px" data-bs-toggle="modal" data-bs-target="#Artemismodal" alt="">
+                </div>
+            </div>
+
+            <!--Aqui ficará o conteúdo dentro das imagens-->
+
+            <div class="j">
+
+                <!--Templo de Ártemis em Éfeso, -->
+                <div class="modal fade" id="Artemismodal" aria-hidden="true" aria-labelledby="ArtemismodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Templo de Ártemis em Éfeso, <span
+                                        class="text-body-secondary">Turquia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j">foi construído no século VI a.C. e posteriormente reconstruído em uma
+                                    versão ainda mais grandiosa no século IV a.C. Com cerca de 115 metros de comprimento
+                                    por 55 metros de largura, e colunas de mármore com cerca de 20 metros de altura,
+                                    <br>
+                                    Ele foi destruído pela primeira vez em 356 a.C. por um incêndio provocado por
+                                    Heróstrato, que queria se tornar famoso, e depois por invasões bárbaras e o avanço
+                                    do Cristianismo, que condenava cultos pagãos.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#ContextohistóricoArtemis"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Quando passa o cursor e clica na image, ela ativa esse modal-->
+                <div class="modal fade" id="ContextohistóricoArtemis" aria-hidden="true"
+                    aria-labelledby="ContextohistóricoArtemisLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Templo de Ártemis em Éfeso, <span
+                                        class="text-body-secondary">Turquia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>O Templo de Ártemis estava localizado perto da antiga cidade de Éfeso, cerca de 75 km
+                                    ao sul da moderna cidade portuária turca de Izmir. Hoje, o local está localizado nos
+                                    arredores da moderna cidade de Selçuk. O santuário (temeno) em Éfeso é muito mais
+                                    antigo do que a própria Ártemis. Pausânias estava convencido de que o local antecede
+                                    o assentamento jônico em muitos anos e é ainda mais antigo do que o oráculo de Apolo
+                                    em Dídima. Ele afirmou que os habitantes pré-jônicos da cidade eram leleges e
+                                    lídios. Calímaco, em seu Hino a Ártemis, atribui o primeiro santuário em Éfeso às
+                                    Amazonas, cujo culto ele imaginou centrado em torno de uma estátua (Bretae) de sua
+                                    mãe, a deusa Ártemis. Pausânias afirmou que Píndaro acreditava que as Amazonas que
+                                    construíram o templo participaram do cerco de Atenas. Tácito também acreditava que o
+                                    templo foi fundado pelas Amazonas, mas Pausânias achava que era mais antigo do que
+
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Artemismodal"
+                                    data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Mausoleu-->
+
+                <div class="modal fade" id="mausoleumodal" aria-hidden="true" aria-labelledby="mausoleumodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Mausoléu de Halicarnasso, <span
+                                        class="text-body-secondary">Turquia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j">construído entre 353 e 350 a.C. como tumba de Mausolo, um sátrapa do
+                                    Império Persa. Com cerca de 45 metros de altura, ele foi erguido com blocos de
+                                    mármore branco e decorado com esculturas criadas pelos mais renomados artistas
+                                    gregos da época. <br>
+                                    A sua destruição se consebiu por sucessivos terremotos durante a Idade Média , no
+                                    século XV, suas pedras foram reutilizadas por cavaleiros cruzados na construção de
+                                    uma fortaleza.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Contextohistóricomausoleu"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Contextohistóricomausoleu" aria-hidden="true"
+                    aria-labelledby="ContextohistóricomausoleuLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Mausoléu de Halicarnasso, <span
+                                        class="text-body-secondary">Turquia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>O mausoléu de Halicarnasso ou mausoléu de Mausolo, foi uma tumba construída entre 353
+                                    e 350 a.C. em Halicarnasso (atual Bodrum, Turquia) para Mausolo <br>
+                                    Halicarnasso era a capital de uma satrapia na costa da Anatólia. Nesse ano, o
+                                    monarca milásio Hecatomno morreu, deixando seus domínios para seu filho, Mausolo.
+                                    Hecatomno, um sátrapa persa local, assumiu o controle de várias cidades e distritos
+                                    vizinhos. Após gerar Mausolo e Artemísia, ele teve vários outros filhos e filhas:
+                                    Ada (mãe adotiva de Alexandre), Idrieu e Pixodaro. Mausolo expandiu seu território
+                                    para a costa sudoeste da Anatólia e, juntamente com Artemísia — era costume na Cária
+                                    que os sátrapas se casassem com suas irmãs, preservando o poder e a riqueza da
+                                    família — governou o território ao redor de Halicarnasso por 24 anos. Mausolo,
+                                    embora descendente de uma população local, falava grego e admirava o modo de vida e
+                                    o governo gregos: fundou muitas cidades projetadas por gregos ao longo da costa e
+                                    apoiou as tradições democráticas gregas.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#mausoleumodal"
+                                    data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Farol de Alexandria-->
+                <div class="modal fade" id="Farolmodal" aria-hidden="true" aria-labelledby="FarolmodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Farol de Alexandria, <span
+                                        class="text-body-secondary">Egito</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j">Construído entre 280 e 247 a.C., este farol está localizado na ilha egípcia
+                                    de Faros. Com 120 a 140 metros de altura, é considerado uma das maiores estruturas
+                                    do mundo antigo, depois das pirâmides. Construído com grandes blocos de calcário, o
+                                    farol era encimado por um espelho de bronze que refletia a luz do sol durante o dia
+                                    e fornecia luz para o fogo à noite. Servia como guia para os marinheiros que
+                                    entravam no porto de Alexandria. Entre os séculos X e XIV, o farol foi severamente
+                                    danificado por três grandes terremotos e acabou desabando completamente. Mais tarde,
+                                    os restos do farol foram usados ​​para construir a Fortaleza de Qaitbay no mesmo
+                                    local.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#ContextohistóricoFarol"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="ContextohistóricoFarol" aria-hidden="true"
+                    aria-labelledby="ContextohistóricoFarolLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Mausoléu de Halicarnasso, <span
+                                        class="text-body-secondary">Turquia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Ptolomeu II ascendeu ao trono em 305 a.C. e logo depois ordenou a construção de um
+                                    farol. A construção foi concluída durante o reinado de seu filho Ptolomeu II
+                                    (Ptolomeu II Filadelfo). O farol levou doze anos para ser construído e custou 800
+                                    talentos, tornando-se o protótipo de todos os faróis subsequentes do mundo. O farol
+                                    era iluminado por uma tocha no topo, e a torre foi construída principalmente com
+                                    blocos sólidos de calcário.<br>
+                                    Fontes árabes indicam que o farol foi construído com grandes blocos de pedra clara,
+                                    com uma torre composta por três grades cônicas: uma seção inferior quadrada com um
+                                    núcleo central, um centro octogonal e um topo circular. O topo da torre tinha um
+                                    espelho para refletir a luz do sol durante o dia e uma fogueira para iluminar à
+                                    noite. Moedas romanas encontradas no mosteiro de Alexandria mostram uma estátua de
+                                    Tritão em cada um dos quatro cantos do farol. Uma estátua de Poseidon ou Zeus ficava
+                                    no topo da torre. Os blocos de alvenaria do Farol de Faros eram interligados e
+                                    selados com chumbo derretido para protegê-lo das ondas. <br></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Farolmodal"
+                                    data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Estátua de zeus olimpia-->
+                <div class="modal fade" id="Zeusmodal" aria-hidden="true" aria-labelledby="ZeusmodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Estátua de Zeus,<span
+                                        class="text-body-secondary"> Olímpia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j"> A escultura tinha placas de marfim e painéis de ouro sobre uma estrutura
+                                    de
+                                    madeira, que representava o deus Zeus sentado em um trono de madeira de cedro
+                                    ornamentado com ébano, marfim, ouro e pedras preciosas. <br>
+                                    deu ordens que tais estátuas dos deuses que eram especialmente famosos por sua
+                                    santidade
+                                    ou por seu mérito artístico, incluindo a de Zeus em Olímpia, deveriam ser trazidos
+                                    da
+                                    Grécia, a fim de remover suas cabeças e colocar a sua própria no lugar.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Contextohistóricozeus"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Contextohistóricozeus" aria-hidden="true"
+                    aria-labelledby="ContextohistóricozeusLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Estátua de Zeus,<span
+                                        class="text-body-secondary"> Olímpia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Criada pelo escultor Fídias no século 5 a.C., essa estátua retratava o deus grego
+                                    Zeus sentado em seu trono… era uma imensa estrutura de 12 metros de altura revestida
+                                    de
+                                    placas de ouro e marfim… a descoberta, na década de 1950, dos restos da oficina de
+                                    Fídias, em Olímpia, confirmou a data da estátua em cerca de 430 a.C</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Zeusmodal" data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Colosso de rodes-->
+
+                <div class="modal fade" id="Rodesmodal" aria-hidden="true" aria-labelledby="RodesmodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Colosso de Rodes<span
+                                        class="text-body-secondary">Grécia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j"> Estátua de Hélio construída por Chares de Lindos entre 292–280 a.C.,
+                                    aproximadamente 33 m de altura, monumento à vitória sobre Demétrio Poliorcetes. <br>
+                                    O problema foi que desabou num terremoto em 226 a.C. e seus restos permaneceram por
+                                    séculos. Tentativas de reconstrução foram proibidas segundo o oráculo de Delfo.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#ContextohistóricoRodes"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Quando passa o cursor e clica na image, ela ativa esse modal-->
+                <div class="modal fade" id="ContextohistóricoRodes" aria-hidden="true"
+                    aria-labelledby="ContextohistóricoRodesLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Colosso de Rodes<span
+                                        class="text-body-secondary">Grécia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>No final do século IV a.C., Rodes, um aliado de Ptolomeu I do Egito, repeliu uma
+                                    invasão massiva de seu inimigo comum, Antígono. Em 304 a.C., Ptolomeu enviou um
+                                    reforço de navios para Rodes, forçando a retirada do exército do rei Demétrio da
+                                    Macedônia (filho de Antígono), que havia sitiado a ilha na tentativa de
+                                    conquistá-la. Demétrio era filho do general Antígono, que herdou parte do Império
+                                    Selêucida de Alexandre. O material usado para a escultura foi obtido pela fundição
+                                    do equipamento militar abandonado lá pelos macedônios. Para celebrar sua vitória, os
+                                    rodianos venderam o equipamento restante por 300 talentos e decidiram usar o
+                                    dinheiro para construir uma estátua colossal de seu deus patrono, Hélio. A escultura
+                                    foi construída por Carés, um nativo de Lindos, Rodes, que esteve envolvido na
+                                    criação de grandes esculturas. Seu professor, o escultor Lísipo,</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Rodesmodal"
+                                    data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Estátua de zeus olimpia-->
+
+                <div class="modal fade" id="Zeusmodal" aria-hidden="true" aria-labelledby="ZeusmodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Estátua de Zeus,<span
+                                        class="text-body-secondary"> Olímpia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j"> A escultura tinha placas de marfim e painéis de ouro sobre uma estrutura
+                                    de
+                                    madeira, que representava o deus Zeus sentado em um trono de madeira de cedro
+                                    ornamentado com ébano, marfim, ouro e pedras preciosas. <br>
+                                    deu ordens que tais estátuas dos deuses que eram especialmente famosos por sua
+                                    santidade
+                                    ou por seu mérito artístico, incluindo a de Zeus em Olímpia, deveriam ser trazidos
+                                    da
+                                    Grécia, a fim de remover suas cabeças e colocar a sua própria no lugar.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Contextohistóricozeus"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Contextohistóricozeus" aria-hidden="true"
+                    aria-labelledby="ContextohistóricozeusLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="featurette-heading fw-normal lh-1">Estátua de Zeus,<span
+                                        class="text-body-secondary"> Olímpia</span></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Criada pelo escultor Fídias no século 5 a.C., essa estátua retratava o deus grego
+                                    Zeus sentado em seu trono… era uma imensa estrutura de 12 metros de altura revestida
+                                    de
+                                    placas de ouro e marfim… a descoberta, na década de 1950, dos restos da oficina de
+                                    Fídias, em Olímpia, confirmou a data da estátua em cerca de 430 a.C</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Zeusmodal" data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Jardins suspênsos da Babilônia-->
+                <div class="modal fade" id="muralhamodal" aria-hidden="true" aria-labelledby="muralhamodalLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="muralhamodalLabel">Jardins suspênsos da Babilônia</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="j"> Entre as sete maravilhas do mundo descritas por um autor da Antiguidade,
+                                    Fílon
+                                    de Bizâncio, encontravam-se as muralhas e os jardins suspensos de Babilónia. Segundo
+                                    o
+                                    relato deste escritor, os jardins babilónicos eram uma grande construção erguida
+                                    sobre
+                                    colunas de pedra que suportavam uma cobertura de troncos de palmeira sobre a qual se
+                                    acumulava bastante terra. Este espaço estava repleto de grande diversidade de
+                                    árvores e
+                                    flores, regadas por um sistema helicoidal usado para elevar a água. Na opinião de
+                                    Fílon,
+                                    tratava-se de uma obra colossal e única, capaz de situar a prática agrícola e
+                                    hortícola
+                                    acima das cabeças dos que a contemplavam. <br>
+                                    No entanto, não há evidências arqueológicas que confirmem sua existência, e algumas
+                                    teorias sugerem que elas podem ter sido construídas em Nínive. <br>
+                                    Na realidade, não se soube qual era o real aspceto do jardins, mas, atráves de
+                                    pesquisas,
+                                    é possível drecifar como era a sua construção e imagens. <br>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#Contextohistórico"
+                                    data-bs-toggle="modal">Contexto histórico</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Contextohistórico" aria-hidden="true"
+                    aria-labelledby="ContextohistóricoLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="ContextohistóricoLabel">Jardins Suspênsos da Babilônia
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>o responsável pela construção de jardins na Babilônia em homenagem à sua esposa, que
+                                    sentia falta da exuberante paisagem montanhosa de sua Pérsia natal. No entanto, não
+                                    há
+                                    um único texto cuneiforme, entre os muitos conhecidos por este monarca, que mencione
+                                    a
+                                    existência de tais jardins elevados na cidade.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#muralhamodal"
+                                    data-bs-toggle="modal">Breve
+                                    resumo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">
+        <img src="Imagens das antigas/cadeira.png" alt="" height="250px" width="400px" style="margin-top: 10px;">
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
